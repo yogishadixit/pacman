@@ -1,0 +1,97 @@
+body{
+     background: #000000; 
+     overflow:hidden; 
+     color: white;
+     background-image: url(/static/Selectback.jpg); 
+     background-repeat:no-repeat; 
+     background-position-x: center; 
+     background-size:100% ;
+     border: 1px solid transparent; 
+     }
+     
+#play
+{
+  background:url(start1.gif)no-repeat;
+           width: 200px;
+           height: 100px;
+           border: none;
+           background-position-x: center;
+           background-size:100%;
+           position:relative;
+           bottom:-600px;
+           left: 1200px;
+           
+}
+
+#easy
+{
+  position:relative;
+  bottom:-350px;
+  left: 300px;          
+}
+
+#easy_text
+{
+  position:relative;
+  bottom:-380px;
+  left: 320px;
+}
+
+.border {
+    border: 5px solid #FFF;
+    }
+
+#medium
+{
+  position:relative;
+  bottom:-400px;
+  left: 300px;      
+}
+
+#medium_text
+{
+  position:relative;
+  bottom:-420px;
+  left: 320px;
+}
+
+#hard
+{
+  position:relative;
+  bottom:-450px;
+  left: 300px;       
+}
+
+#hard_text
+{
+  position:relative;
+  bottom:-480px;
+  left: 320px;
+}
+
+select {
+    border: 0 none;
+    color: #FFFFFF;
+    background: transparent;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 2px 10px;
+    width: 378px;
+    *width: 350px;
+    *background: #58B14C;
+    position:relative;
+    left:300px;
+    bottom:-500px;
+    }
+
+#headstart {
+    overflow: hidden;
+    width: 350px;
+    -moz-border-radius: 9px 9px 9px 9px;
+    -webkit-border-radius: 9px 9px 9px 9px;
+    border-radius: 9px 9px 9px 9px;
+    box-shadow: 1px 1px 11px #330033;
+    background: url("arrow.gif") no-repeat scroll 319px 5px #0b56cf;
+    }
+
+

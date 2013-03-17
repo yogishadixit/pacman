@@ -1,0 +1,44 @@
+#encounter
+{
+  /*position: relative;
+  left: 650px;
+  top: 10px;*/
+  text-align: center;
+}
+
+.user_status {
+  text-align:right;
+  color: white;
+  }
+  
+body{
+     background: #000000; 
+     overflow:hidden; 
+     color: black;
+     }
+     
+p
+{
+  color: white;
+  text-align: center;
+  position: relative;
+  bottom: -100px;
+  font-size: 200%;
+}
+
+#image
+{
+  text-align: center;
+}
+
+#resume {
+           background:url(RulesText.gif)no-repeat;
+           width: 200px;
+           height: 100px;
+           border: none;
+           
+           background-size:100%;
+           
+           position:relative;
+           bottom: -100px;     
+}

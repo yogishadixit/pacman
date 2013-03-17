@@ -1,0 +1,599 @@
+.rules
+{
+  background:url(Rules.gif)no-repeat;
+           width: 94px;
+           height: 32px;
+           border: none;
+           background-position-x: center;
+           background-size:75%;
+           position:relative;
+           bottom:-850px
+ }
+ 
+.user_status{
+  text-align:right;
+  }
+
+a:link {
+        color:#CC0099; 
+        font-weight:bold;
+        } 
+
+
+a:visited {
+           color:#CC0099; 
+           font-weight:bold;
+           }
+
+
+a:hover {
+         color:#CC33FF; 
+         font-weight:bold;
+         } 
+
+
+a:active{
+         color:#CC0099; 
+         font-weight:bold;
+         }
+	
+/* Base styles on the body
+*******************************************************************************/
+
+body {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  color:white;
+  background-image: url(/static/Playback1.jpg);
+  background-repeat:no-repeat; 
+  background-size:100% ;
+  border: 1px solid transparent;
+
+}
+
+/* The containers that create the viewport for the maze
+*******************************************************************************/
+
+#maze-container,
+#maze {
+  height: 500px;
+  width: 500px;
+}
+
+#maze-container {
+  /* These styles put the container in the middle of the page */
+  background: #eee;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -250px;
+  margin-top: -250px;
+
+  border: 1px solid #000;
+  overflow: hidden;
+}
+
+#maze {
+  /* These styles set the #maze element to contain the 3D walls */
+  position: relative;
+  -webkit-transform: perspective(1000px);
+  -webkit-transform-style: preserve-3d;
+  
+}
+
+/* This is the base class for the walls in the maze
+*******************************************************************************/
+
+.wall {
+  /* Walls are 500px per side: 498px content with 2px border on each side */
+  background-image: url(/static/wall.jpg);
+  border: 2px solid #272240;
+  height: 496px;
+  width: 496px;
+
+  /* Start each wall in the corner of the #maze */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+
+
+/* 
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+**********************************GROUND***************************************
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************/
+.floor {
+  /* Walls are 500px per side: 498px content with 2px border on each side */
+  background-image: url(/static/floor.jpg);
+  border: 1px solid #000;
+  height: 2248px;
+  width: 1498px;
+
+  /* Start each wall in the corner of the #maze */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+
+.ground { 
+  -webkit-transform:  translatez(-1125px) translatex(-500px) translatey(-625px) rotatex(90deg);
+  z-index: 200;
+}
+
+
+/* 
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+**********************************BACKWALL*************************************
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************/
+.backwall {
+  /* Walls are 500px per side: 498px content with 2px border on each side */
+  background: grey;
+  border: 1px solid #000;
+  height: 1500px;
+  width: 1700px;
+
+  /* Start each wall in the corner of the #maze */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.far {
+  -webkit-transform: translateZ(-2300px) translateX(-625px) translateY(-600px) ;
+}
+
+/* 
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+**********************************Y WALLS**************************************
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************/
+
+
+
+
+
+/* Y=0
+*******************************************************************************/
+
+.yx-1y0 {
+  -webkit-transform:  translateX(-250px) rotateY(90deg);
+  z-index: 200;
+}
+
+.yxt1y0 {
+  -webkit-transform:  translateX(250px) rotateY(-90deg);
+  z-index: 200;
+}
+
+
+/* Y=1
+*******************************************************************************/
+
+.yx-1y1 {
+  -webkit-transform: translateZ(-500px) translateX(-250px) rotateY(90deg);
+}
+
+.yxt1y1 {
+  -webkit-transform: translateZ(-500px) translateX(250px) rotateY(-90deg);
+}
+
+
+
+/* Y=2
+*******************************************************************************/
+
+.yx-1y2 {
+  -webkit-transform: translateZ(-1000px) translateX(-250px) rotateY(90deg);
+}
+
+.yxt1y2 {
+  -webkit-transform: translateZ(-1000px) translateX(250px) rotateY(-90deg);
+}
+
+
+/* Y=3
+*******************************************************************************/
+
+.yx-1y3 {
+  -webkit-transform: translateZ(-1500px) translateX(-250px) rotateY(90deg);
+}
+
+.yxt1y3 {
+  -webkit-transform: translateZ(-1500px) translateX(250px) rotateY(-90deg);
+}
+
+/* Y=4
+*******************************************************************************/
+.yx-2y4 {
+  -webkit-transform: translateZ(-2000px) translateX(-750px) rotateY(90deg);
+}
+.yx-1y4 {
+  -webkit-transform: translateZ(-2000px) translateX(-250px) rotateY(90deg);
+}
+
+.yxt1y4 {
+  -webkit-transform: translateZ(-2000px) translateX(250px) rotateY(-90deg);
+}
+
+
+.yxt2y4 {
+  -webkit-transform: translateZ(-2000px) translateX(750px) rotateY(-90deg);
+}
+
+/* Y=5
+*******************************************************************************/
+.yx-2y5 {
+  -webkit-transform: translateZ(-2500px) translateX(-750px) rotateY(90deg);
+}
+.yx-1y5 {
+  -webkit-transform: translateZ(-2500px) translateX(-250px) rotateY(90deg);
+}
+
+.yxt1y5 {
+  -webkit-transform: translateZ(-2500px) translateX(250px) rotateY(-90deg);
+}
+
+
+.yxt2y5 {
+  -webkit-transform: translateZ(-2500px) translateX(750px) rotateY(-90deg);
+}
+
+/* Y=4
+*******************************************************************************/
+.yx-2y6 {
+  -webkit-transform: translateZ(-3000px) translateX(-750px) rotateY(90deg);
+}
+.yx-1y6 {
+  -webkit-transform: translateZ(-3000px) translateX(-250px) rotateY(90deg);
+}
+
+.yxt1y6 {
+  -webkit-transform: translateZ(-3000px) translateX(250px) rotateY(-90deg);
+}
+
+
+.yxt2y6 {
+  -webkit-transform: translateZ(-3000px) translateX(750px) rotateY(-90deg);
+}
+
+
+/* 
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+**********************************X WALLS**************************************
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************/
+
+
+/* y=1
+*******************************************************************************/
+
+.x00y1 {
+  -webkit-transform: translateZ(-250px);
+  z-index: 200;
+}
+
+.x-1y1 {
+  -webkit-transform: translateZ(-250px) translateX(-500px);
+}
+
+.xt1y1 {
+  -webkit-transform: translateZ(-250px) translateX(500px);
+}
+
+
+/* y=2
+*******************************************************************************/
+
+.x00y2 {
+  -webkit-transform: translateZ(-750px);
+  z-index: 200;
+}
+
+.x-1y2 {
+  -webkit-transform: translateZ(-750px) translateX(-500px);
+}
+
+.xt1y2 {
+  -webkit-transform: translateZ(-750px) translateX(500px);
+}
+
+/* y=3
+*******************************************************************************/
+
+.x00y3 {
+  -webkit-transform: translateZ(-1250px);
+  z-index: 200;
+}
+
+.x-1y3 {
+  -webkit-transform: translateZ(-1250px) translateX(-500px);
+}
+
+.xt1y3 {
+  -webkit-transform: translateZ(-1250px) translateX(500px);
+}
+/* y=4
+*******************************************************************************/
+
+.x00y4 {
+  -webkit-transform: translateZ(-1750px);
+  z-index: 200;
+}
+
+.x-1y4 {
+  -webkit-transform: translateZ(-1750px) translateX(-500px);
+}
+
+.xt1y4 {
+  -webkit-transform: translateZ(-1750px) translateX(500px);
+}
+
+/* y=5
+*******************************************************************************/
+
+
+
+.x00y5 {
+  -webkit-transform: translateZ(-2250px);
+  z-index: 200;
+}
+
+.x-1y5 {
+  -webkit-transform: translateZ(-2250px) translateX(-500px);
+}
+
+
+.xt1y5 {
+  -webkit-transform: translateZ(-2250px) translateX(500px);
+}
+
+.x-2y5 {
+  -webkit-transform: translateZ(-2250px) translateX(-1000px);
+}
+
+
+.xt2y5 {
+  -webkit-transform: translateZ(-2250px) translateX(1000px);
+}
+
+
+.xt2y5 {
+  -webkit-transform: translateZ(-2250px) translateX(1000px);
+}
+/* y=6
+*******************************************************************************/
+
+
+
+.x00y6 {
+  -webkit-transform: translateZ(-2250px);
+  z-index: 200;
+}
+
+.x-1y6 {
+  -webkit-transform: translateZ(-2250px) translateX(-500px);
+}
+
+
+.xt1y6 {
+  -webkit-transform: translateZ(-2250px) translateX(500px);
+}
+
+.x-2y6 {
+  -webkit-transform: translateZ(-2250px) translateX(-1000px);
+}
+
+
+.xt2y6 {
+  -webkit-transform: translateZ(-2250px) translateX(1000px);
+}
+
+
+.xt2y6 {
+  -webkit-transform: translateZ(-2250px) translateX(1000px);
+}
+
+/* y=7
+*******************************************************************************/
+
+
+
+.x00y7 {
+  -webkit-transform: translateZ(-2250px);
+  z-index: 200;
+}
+
+.x-1y7 {
+  -webkit-transform: translateZ(-2250px) translateX(-500px);
+}
+
+
+.xt1y7 {
+  -webkit-transform: translateZ(-2250px) translateX(500px);
+}
+
+.x-2y7 {
+  -webkit-transform: translateZ(-2250px) translateX(-1000px);
+}
+
+
+.xt2y7 {
+  -webkit-transform: translateZ(-2250px) translateX(1000px);
+}
+
+
+.xt2y7 {
+  -webkit-transform: translateZ(-2250px) translateX(1000px);
+}
+
+/* 
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************
+**********************************X WALLS**************************************
+*******************************************************************************
+*******************************************************************************
+*******************************************************************************/
+
+
+
+/* This is the base class for the walls in the maze
+*******************************************************************************/
+
+.ghostt {
+  /* Walls are 500px per side: 498px content with 2px border on each side */
+  background-image: url(/static/ghost.gif);
+  border: 0px;
+  height: 400px;
+  width: 300px;
+
+  /* Start each wall in the corner of the #maze */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.AA {
+  -webkit-transform: translateZ(0px)  translateX(0px);
+  z-index: 200;
+}
+
+
+/* x=1
+*******************************************************************************/
+
+
+
+.gx00y1 {
+  -webkit-transform: translateZ(-500px)  translateX(100px);
+  z-index: 200;
+}
+
+.gx-1y1 {
+  -webkit-transform: translateZ(-500px) translateX(-400px);
+}
+
+.gxt1y1 {
+  -webkit-transform: translateZ(-500px) translateX(600px);
+}
+
+/* x=1
+*******************************************************************************/
+
+
+
+.gx00y2 {
+  -webkit-transform: translateZ(-1000px)  translateX(100px);
+  z-index: 200;
+}
+
+.gx-1y2 {
+  -webkit-transform: translateZ(-1000px) translateX(-400px);
+}
+
+.gxt1y2 {
+  -webkit-transform: translateZ(-1000px) translateX(600px);
+}
+
+/* x=1
+*******************************************************************************/
+
+
+
+.gx00y3 {
+  -webkit-transform: translateZ(-1500px)  translateX(100px);
+  z-index: 200;
+}
+
+.gx-1y3 {
+  -webkit-transform: translateZ(-1500px) translateX(-400px);
+}
+
+.gxt1y3 {
+  -webkit-transform: translateZ(-1500px) translateX(600px);
+}
+
+/* x=1
+*******************************************************************************/
+
+
+
+.gx00y4 {
+  -webkit-transform: translateZ(-2000px)  translateX(100px);
+  z-index: 200;
+}
+
+.gx-1y4 {
+  -webkit-transform: translateZ(-2000px) translateX(-400px);
+}
+
+.gxt1y4 {
+  -webkit-transform: translateZ(-2000px) translateX(600px);
+}
+
+
+/* x=5
+*******************************************************************************/
+
+
+
+.gx00y5 {
+  -webkit-transform: translateZ(-2500px)  translateX(100px);
+  z-index: 200;
+}
+
+.gx-1y5 {
+  -webkit-transform: translateZ(-2500px) translateX(-400px);
+}
+
+.gxt1y5 {
+  -webkit-transform: translateZ(-2500px) translateX(600px);
+}
+.gx-2y5 {
+  -webkit-transform: translateZ(-2500px) translateX(-900px);
+}
+
+.gxt2y5 {
+  -webkit-transform: translateZ(-2500px) translateX(1100px);
+}
+
+
+/* changes the counter div
+*******************************************************************************/
+#counter_container {
+  height: 100px;
+  width: 500px;
+}
+
+#counter_container {
+  position: fixed;
+  left: 45%;
+  top: 25%;
+  margin-left: -50px;
+  margin-top: -50px;
+
+  border: 1px solid #000;
+  overflow: hidden;
+}
+/* 
+*******************************************************************************/

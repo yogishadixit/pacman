@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <link rel="stylesheet" href="/static/play.css">
+    <title> Play </title>
+    
+   
+  </head>
+
+<script>
+
+</script>
+
+
+    <body>
+        <div class="user_status">
+          <p> Welcome, {{user.email() }}</p>
+          <a href="{{logout}}">Logout</a>
+        </div>
+        
+        <h1><center>TROLOLOLOLO</center></h1>
+        <p><center>gameplay window goes here also here's a stress relieving video!~</center></p>
+        <center><iframe 
+           width="560" height="315" src="http://www.youtube.com/embed/XmcvYxH5Ei4" frameborder="0" allowfullscreen>
+        </iframe> </center>
+
+
+    </body>
+
+</html>
